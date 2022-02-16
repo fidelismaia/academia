@@ -1,5 +1,7 @@
 package questao01;
 
+import java.util.Scanner;
+
 public class Escada {
 
     public static void main(String args[]) {
@@ -8,8 +10,11 @@ public class Escada {
 
     // Esse método desenha uma escada de tamanho n utilizando o caractere *
     public static void desenhaEscada() {
-        int n = 6;
-        for (int j = 0; j <= n; j++) {
+        Scanner sc = new Scanner(System.in);
+        int n;
+        System.out.println("Digite o valor inteiro de n:");
+        n = sc.nextInt();
+        for (int j = 1; j <= n; j++) {
             for (int i = n; i > j; i--) {
                 System.out.print(' ');
             }
@@ -18,5 +23,6 @@ public class Escada {
             }
             System.out.println();
         }
+        sc.close();
     }
 }
