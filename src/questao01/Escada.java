@@ -4,16 +4,15 @@ import java.util.Scanner;
 
 public class Escada {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         desenhaEscada();
     }
 
     // Esse método desenha uma escada de tamanho n utilizando o caractere *
     public static void desenhaEscada() {
         Scanner sc = new Scanner(System.in);
-        int n;
-        System.out.println("Digite o valor inteiro de n:");
-        n = sc.nextInt();
+        System.out.print("n = ");
+        int n = sc.nextInt();
         for (int j = 1; j <= n; j++) {
             for (int i = n; i > j; i--) {
                 System.out.print(' ');
